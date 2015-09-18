@@ -22,8 +22,8 @@ function init(){
 	document.addEventListener("mouseup",function(){boolDraw=false;});
 	canvas.addEventListener("mousemove",mousemove);
 	ctx=canvas.getContext('2d');
-	ctx.canvas.width = window.innerWidth * 0.95;
-	ctx.canvas.height = window.innerHeight * 0.95;
+	ctx.canvas.width = window.innerWidth;
+	ctx.canvas.height = window.innerHeight;
 	menu();
 	boolDraw=false;	
 }
