@@ -20,7 +20,7 @@ function init(){
 	canvas.addEventListener("click",click);
 	document.addEventListener("mousedown",function(){boolDraw=true;});
 	document.addEventListener("mouseup",function(){boolDraw=false;});
-	canvas.addEventListener("mousemove",mousemove);
+	canvas.addEventListener("mousemove", mousemove);
 	ctx=canvas.getContext('2d');
 	ctx.canvas.width = window.innerWidth;
 	ctx.canvas.height = window.innerHeight;
@@ -41,7 +41,7 @@ function defaultImg(i){ return i; }
 function click(e){
 	var spaceB = canvas.width/imgDB.length;
 	//menu superiore
-	if(e.clientY<60){
+	if(e.clientY<60) {
 		for(var i = 0; i< imgDB.length;i++){
 			if(e.clientX>=imgDB[i].xPos && e.clientX <=imgDB[i].xPos+40){
 				intSelected=i;
