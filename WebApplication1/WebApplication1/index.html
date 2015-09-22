@@ -15,13 +15,27 @@
 	</script>
 </head>
 <body onload="init()">
-    <!-- <div class="header">Welcome to DODODraw v1!</div> -->
-	<canvas id="canvas"> Canvas not supported </canvas>
+	<div class="header">Welcome to DODODraw v1.5!</div>
+	<div class="toolbar">
+	  <div id="img">
+	    <button class="btn" onclick="setSelected(0);"><img src="img/assioli.png" id="foto0" height="40" width="40" /></button>
+	    <button class="btn" onclick="setSelected(1);"><img src="img/dodo.png" id="foto1" height="40" width="40" /></button>
+	    <button class="btn" onclick="setSelected(2);"><img src="img/vetto.png" id="foto2" height="40" width="40" /></button>
+	    <button class="btn" onclick="setSelected(3);"><img src="img/ennio.png" id="foto2" height="40" width="40" /></button>
+	    <button class="btn" onclick="setSelected(4);"><img src="img/malo.png" id="foto2" height="40" width="40" /></button>
+	    <button class="btn" onclick="setSelected(5);"><img src="img/agab.png" id="foto2" height="40" width="40" /></button>
+	    <button class="btn" onclick="init();">RESET</button>
+	  </div>
+	</div>
+<div class="maincol">
+	<div class="leftbar"><button class="btn">RAINBOW</button></div>
+	<div class="main"><canvas id="canvas">Canvas not supported.</canvas></div>
+</div>
 	<div id="img" style="display:none" >
-		<!--  Per aggiungere foto basta aggiungere una img con id foto# (numero di quella prima+1)-->
-		<img src="img/assioli.png" id="foto0" height="40" width="40" /> 
-        <img src="img/dodo.png" id="foto1" height="40" width="40" />
-        <img src="img/vetto.png" id="foto2" height="40" width="40" /> 
+	<!--  Per aggiungere foto basta aggiungere una img con id foto# (numero di quella prima+1)-->
+	
+        
+        
         <img src="img/ennio.png" id="foto3" height="40" width="40" />
         <img src="img/malo.png" id="foto4" height="40" width="40" />
         <img src="img/agab.png" id="foto5" height="40" width="40" /> 
@@ -30,6 +44,5 @@
 	</div>
 	<div id="fu" style ="display:none">
         <img src="img/free_rainbow.png" id="functions0" height="40" width="40" data-todo="pp" />
-        <img src="img/games-icon.png" id="functions1" height="40" width="40" data-todo="ss" />
 	</div>
 </body>

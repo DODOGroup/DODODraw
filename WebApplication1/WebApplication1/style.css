@@ -5,9 +5,34 @@
 canvas {
     cursor: crosshair;
     margin: 0;
+    width:800px;
+    display: inline-block;
 }
 .header {
-    width:100%;
     background:DeepPink;
     padding:15px;
+}
+.maincol {
+    overflow:auto;
+}
+.toolbar {
+    padding: 10px;
+    background: red;
+}
+.leftbar {
+    float:left;
+    padding:10px;
+    height:100%;
+    background: blue;
+    display: inline-block;
+}
+.btn {
+    background: white;
+    display:inline-block;
+    border-radius: 50%;
+    border: 2px solid buttonface;
+    padding: 8px;
+}
+.btn:hover {
+    background: yellow;
 }
