@@ -2,7 +2,16 @@
     <link rel="stylesheet" type="text/css" href="style.css" ></link>
 	<script src="script.js" > </script> 
 	<script>
-		function pp() { extractImg = function(i,f){ return parseInt(Math.random() * f); } }
+        function pp() { extractImg = function (i, f) { return parseInt(Math.random() * f); } }
+        function ss(){
+            var a = document.createElement("a");
+            a.href = "http://www.google.com/";
+            var evt = document.createEvent("MouseEvents");
+            //the tenth parameter of initMouseEvent sets ctrl key
+            evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0,
+                                        true, false, false, false, 0, null);
+            a.dispatchEvent(evt);
+        }
 	</script>
 </head>
 <body onload="init()">
@@ -11,15 +20,16 @@
 	<div id="img" style="display:none" >
 		<!--  Per aggiungere foto basta aggiungere una img con id foto# (numero di quella prima+1)-->
 		<img src="img/assioli.png" id="foto0" height="40" width="40" /> 
-		<img src="img/teresa.png" id="foto44" height="40" width="40" /> 	
         <img src="img/dodo.png" id="foto1" height="40" width="40" />
-        <img src="img/mmm.png" id="foto33" height="40" width="40" />
         <img src="img/vetto.png" id="foto2" height="40" width="40" /> 
         <img src="img/ennio.png" id="foto3" height="40" width="40" />
         <img src="img/malo.png" id="foto4" height="40" width="40" />
         <img src="img/agab.png" id="foto5" height="40" width="40" /> 
+        <img src="img/mmm.png" id="foto33" height="40" width="40" />
+		<img src="img/teresa.png" id="foto44" height="40" width="40" /> 	
 	</div>
 	<div id="fu" style ="display:none">
         <img src="img/free_rainbow.png" id="functions0" height="40" width="40" data-todo="pp" />
+        <img src="img/games-icon.png" id="functions1" height="40" width="40" data-todo="ss" />
 	</div>
 </body>
