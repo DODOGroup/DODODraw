@@ -65,20 +65,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="agab.png" />
-    <Content Include="assioli.png" />
-    <Content Include="dodo.png" />
-    <Content Include="dora-verticale-wpcf_180x255.jpg" />
-    <Content Include="download.png" />
-    <Content Include="ennio.png" />
-    <Content Include="free_rainbow.png" />
+    <Content Include="img\agab.png" />
+    <Content Include="img\assioli.png" />
+    <Content Include="img\dodo.png" />
+    <Content Include="img\dora-verticale-wpcf_180x255.jpg" />
+    <Content Include="img\download.png" />
+    <Content Include="img\ennio.png" />
+    <Content Include="img\free_rainbow.png" />
     <Content Include="index.html" />
-    <Content Include="malo.png" />
-    <Content Include="mmm.png" />
+    <Content Include="img\malo.png" />
+    <Content Include="img\mmm.png" />
     <Content Include="script.js" />
     <Content Include="style.css" />
-    <Content Include="teresa.png" />
-    <Content Include="vetto.png" />
+    <Content Include="img\teresa.png" />
+    <Content Include="img\vetto.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
