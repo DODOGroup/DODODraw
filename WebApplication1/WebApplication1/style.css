@@ -1,0 +1,13 @@
+﻿body {
+    margin: 0;
+    font-family:Roboto, arial, sans-serif;
+}
+canvas {
+    cursor: crosshair;
+    margin: 0;
+}
+.header {
+    width:100%;
+    background:DeepPink;
+    padding:15px;
+}

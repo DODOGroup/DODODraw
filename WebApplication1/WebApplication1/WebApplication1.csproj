@@ -76,6 +76,7 @@
     <Content Include="malo.png" />
     <Content Include="mmm.png" />
     <Content Include="script.js" />
+    <Content Include="style.css" />
     <Content Include="teresa.png" />
     <Content Include="vetto.png" />
     <Content Include="Web.config" />
