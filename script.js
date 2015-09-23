@@ -16,11 +16,17 @@ function init(){
 		return;
 	}
 	inUseFunction = function() {};
-	canvas=document.getElementById("canvas");
+	canvas = document.getElementById("canvas");
+    //eventi
 	canvas.addEventListener("click",click);
 	document.addEventListener("mousedown",function(){boolDraw=true;});
 	document.addEventListener("mouseup",function(){boolDraw=false;});
 	canvas.addEventListener("mousemove", mousemove);
+	canvas.addEventListener("touchstart", function (e) { console.log("click"); click(e); });
+	document.addEventListener("touchstart", function () { console.log("startTuch"); boolDraw = true; });
+	document.addEventListener("touchend", function () { console.log("endTuch"); boolDraw = false; });
+	canvas.addEventListener("touchmove", function (w) { console.log("moving"); mousemove(w); });
+    //end enventi
 	ctx=canvas.getContext('2d');
 	ctx.canvas.width = window.innerWidth;
 	ctx.canvas.height = window.innerHeight;
