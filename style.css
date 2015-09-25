@@ -11,3 +11,14 @@ canvas {
     background:DeepPink;
     padding:15px;
 }
+.menu{
+    width:20%;
+    height:20%;
+    background-color:whitesmoke;
+    border:dotted;
+    position:absolute;
+}
+.textMenu{
+    width:98%;
+    align-items:center; /*che finocchi sono i commenti in sto css di merda... da sistemare btw*/
+}
