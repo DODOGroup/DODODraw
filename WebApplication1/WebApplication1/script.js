@@ -4,6 +4,9 @@ var boolDraw;
 var functionList;
 var inUseFunction;
 var extractImg;
+var singleImgH, singleImgW;
+var defImgH = 40;
+var defImgW = 40;
 
 function init(){
 	var div = document.getElementById("img");
@@ -18,34 +21,51 @@ function init(){
 	inUseFunction = function() {};
 	canvas = document.getElementById("canvas");
     //eventi
-	canvas.addEventListener("click",click);
-	document.addEventListener("mousedown",function(){boolDraw=true;});
-	document.addEventListener("mouseup",function(){boolDraw=false;});
-	canvas.addEventListener("mousemove", mousemove);
-	canvas.addEventListener("touchstart", function (e) { console.log("click"); click(e); });
-	document.addEventListener("touchstart", function () { console.log("startTuch"); boolDraw = true; });
-	document.addEventListener("touchend", function () { console.log("endTuch"); boolDraw = false; });
-	canvas.addEventListener("touchmove", function (w) { console.log("moving"); mousemove(w); });
+	attatchEvents();
     //end enventi
 	ctx=canvas.getContext('2d');
 	ctx.canvas.width = window.innerWidth;
 	ctx.canvas.height = window.innerHeight;
 	menu();
-	boolDraw=false;	
+	boolDraw = false;
+	singleImgH = defImgH;
+	singleImgW = defImgW;
 }
-function mousemove(e){
-	if( boolDraw && e.clientY>80 && e.clientX >80 )
-	{ 
+function attatchEvents() {
+    window.addEventListener("resize", init);
+    canvas.addEventListener("click", click);
+    document.addEventListener("mousedown", function () { boolDraw = true; });
+    document.addEventListener("mouseup", function () { boolDraw = false; });
+    canvas.addEventListener("mousemove", mousemove);
+    canvas.addEventListener("mousedown" ,function(){document.getElementById("menu").style.display = "none"; });
+    canvas.addEventListener("contextmenu", spawnDiv);
+    canvas.addEventListener("touchstart", function (e) { console.log("click"); click(e); });
+    document.addEventListener("touchstart", function () { console.log("startTuch"); boolDraw = true; });
+    document.addEventListener("touchend", function () { console.log("endTuch"); boolDraw = false; });
+    canvas.addEventListener("touchmove", function (w) { console.log("moving"); mousemove(w); });
+}
+function spawnDiv(e) {
+    var k = document.getElementById("menu");
+    k.style.display = "";
+    k.style.top = e.clientY;
+    k.style.left = e.clientX;
+    document.getElementById("newH").value = singleImgH;
+    document.getElementById("newW").value = singleImgW;
+    document.body.appendChild(k);
+    e.preventDefault(); //same   vvv
+    return false; //dont spawn default one
+}
+function mousemove(e) {
+    if (boolDraw && e.clientY > 80 && e.clientX > 80 && e.which != 3)
+    {
 		inUseFunction(); 
-		console.log(extractImg);
-		ctx.drawImage(imgDB[extractImg(intSelected, imgDB.length)],e.clientX-20,e.clientY-20,40,40);
+		ctx.drawImage(imgDB[extractImg(intSelected, imgDB.length)], e.clientX - singleImgW / 2, e.clientY - singleImgH / 2, singleImgW, singleImgH);
 	}
 }
-
 function defaultImg(i){ return i; }
-
-function click(e){
-	var spaceB = canvas.width/imgDB.length;
+function click(e) {
+    var spaceB = canvas.width / imgDB.length;
+    document.getElementById("menu").style.display = "none"//nomenu on draw
 	//menu superiore
 	if(e.clientY<60) {
 		for(var i = 0; i< imgDB.length;i++){
@@ -63,6 +83,10 @@ function click(e){
 				return;
 			}
 		}
+	} else {
+	    boolDraw = true;
+	    mousemove(e); //click ora disegna
+	    boolDraw = false;
 	}
 }
 function loadFunction(){
