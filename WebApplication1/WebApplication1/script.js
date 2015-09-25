@@ -58,7 +58,6 @@ function spawnDiv(e) {
 function mousemove(e) {
     if (boolDraw && e.clientY > 80 && e.clientX > 80 && e.which != 3)
     {
-		inUseFunction(); 
 		ctx.drawImage(imgDB[extractImg(intSelected, imgDB.length)], e.clientX - singleImgW / 2, e.clientY - singleImgH / 2, singleImgW, singleImgH);
 	}
 }
