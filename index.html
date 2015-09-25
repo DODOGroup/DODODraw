@@ -4,21 +4,16 @@
 	<script src="script.js" > </script> 
 	<script>
         //random face
-        function pp() { extractImg = function (i, f) { return parseInt(Math.random() * f); } }
+        function randomFace() { extractImg = function (i, f) { return parseInt(Math.random() * f); } }
         //open in a new tab
-        function ss() {
-            var a = document.createElement("a");
-            a.href = "http://www.google.com/";
-            var evt = document.createEvent("MouseEvents");
-            //the tenth parameter of initMouseEvent sets ctrl key
-            evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0,
-                                        true, false, false, false, 0, null);
-            a.dispatchEvent(evt);
-        }
         function FaceDim() {
             singleImgH = document.getElementById("newH").value;
             singleImgW = document.getElementById("newW").value;
             document.getElementById("menu").style.display  = "none"
+        }
+        function CleanCanvas() {
+            ctx.clearRect(80, 80, canvas.width, canvas.height);
+            inUseFunction = defaultImg;
         }
 	</script>
 </head>
@@ -37,10 +32,12 @@
 		<img src="img/teresa.png" id="foto44" height="40" width="40" /> 	
 	</div>
 	<div id="fu" style ="display:none">
-        <img src="img/free_rainbow.png" id="functions0" height="40" width="40" data-todo="pp" />
-        <img src="img/games-icon.png" id="functions1" height="40" width="40" data-todo="ss" />
-	</div>
-    <div id="menu" style="display:none" class="menu">
+        <img src="img/free_rainbow.png" id="functions0" height="40" width="40" data-todo="randomFace" />
+        <!--<img src="img/games-icon.png" id="functions1" height="40" width="40" data-todo="ss" /> dev. dropped, usless -->
+	    <img src="img/CLEANSWEEP.png" id="functions1" height="40" width="40" data-todo="CleanCanvas" />
+    </div>
+    <!-- menu popup right click-->
+        <div id="menu" style="display:none" class="menu">
         <div id="overPart" class="textMenu">
             <center>Height</center><br />
             <input class="textMenu" type="text" id="newH" /> <br />
