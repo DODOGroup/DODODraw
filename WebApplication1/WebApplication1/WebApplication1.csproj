@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="img\agab.png" />
     <Content Include="img\assioli.png" />
+    <Content Include="img\CLEANSWEEP.png" />
     <Content Include="img\dodo.png" />
     <Content Include="img\dora-verticale-wpcf_180x255.jpg" />
     <Content Include="img\download.png" />

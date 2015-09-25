@@ -77,9 +77,10 @@ function click(e) {
 			}
 		}
 	}else if(e.clientX < 60){
-		for(var i = 0; i<functionList.length; i++){
-			if(e.clientX >= functionList[i].xPos && e.clientX <=functionList[i].xPos+40){
-				inUseFunction = window[functionList[i].dataset.todo];
+	    for (var i = 0; i < functionList.length; i++) {
+			if(e.clientY >= functionList[i].yPos && e.clientY <=functionList[i].yPos+40){
+			    inUseFunction = window[functionList[i].dataset.todo];
+			    inUseFunction();
 				return;
 			}
 		}
@@ -130,13 +131,13 @@ function supMen(){
 	}
 }
 function rightMen(){
-	var spaceR = (canvas.height - 40) / functionList.length;
+	var spaceR = (canvas.height - 70) / functionList.length;
 	ctx.beginPath();
 	ctx.rect(0,60,60,canvas.height);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	for(var i = 0; i<functionList.length; i++){
-		functionList[i].xPos = spaceR * i;
+	    functionList[i].yPos = 70 + (i * spaceR + 3);
 		ctx.drawImage(functionList[i],10,70 + (i*spaceR + 3),40,40);
 	}
 	//10 70
