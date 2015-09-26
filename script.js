@@ -39,10 +39,8 @@ function attatchEvents() {
     canvas.addEventListener("mousemove", mousemove);
     canvas.addEventListener("mousedown" ,function(){document.getElementById("menu").style.display = "none"; });
     canvas.addEventListener("contextmenu", spawnDiv);
-    canvas.addEventListener("touchstart", function (e) { console.log("click"); click(e); });
-    document.addEventListener("touchstart", function () { console.log("startTuch"); boolDraw = true; });
-    document.addEventListener("touchend", function () { console.log("endTuch"); boolDraw = false; });
-    canvas.addEventListener("touchmove", function (w) { console.log("moving"); mousemove(w); });
+    canvas.addEventListener("touchstart", function (e) { e.preventDefault(); e.clientX = e.targetTouches[0].clientX; e.clientY = e.targetTouches[0].clientY; click(e); });
+    canvas.addEventListener("touchmove", function (w) { w.preventDefault(); w.clientX = w.targetTouches[0].clientX; w.clientY = w.targetTouches[0].clientY; boolDraw = true; mousemove(w); boolDraw = false; });
 }
 function spawnDiv(e) {
     var k = document.getElementById("menu");
@@ -56,7 +54,7 @@ function spawnDiv(e) {
     return false; //dont spawn default one
 }
 function mousemove(e) {
-    if (boolDraw && e.clientY > 80 && e.clientX > 80 && e.which != 3)
+    if (boolDraw && e.clientY > 60 + singleImgH/2  && e.clientX > 60 + singleImgW/2 && e.which != 3)
     {
 		ctx.drawImage(imgDB[extractImg(intSelected, imgDB.length)], e.clientX - singleImgW / 2, e.clientY - singleImgH / 2, singleImgW, singleImgH);
 	}

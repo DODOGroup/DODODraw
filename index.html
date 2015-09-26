@@ -5,14 +5,14 @@
 	<script>
         //random face
         function randomFace() { extractImg = function (i, f) { return parseInt(Math.random() * f); } }
-        //open in a new tab
+        
         function FaceDim() {
             singleImgH = document.getElementById("newH").value;
             singleImgW = document.getElementById("newW").value;
             document.getElementById("menu").style.display  = "none"
         }
         function CleanCanvas() {
-            ctx.clearRect(80, 80, canvas.width, canvas.height);
+            ctx.clearRect(60, 60, canvas.width, canvas.height);
             inUseFunction = defaultImg;
         }
 	</script>
