@@ -15,6 +15,9 @@
             ctx.clearRect(60, 60, canvas.width, canvas.height);
             inUseFunction = defaultImg;
         }
+        function setExtract() {
+            extractImg = function () { return new Image(40, 40);}
+        }
 	</script>
 </head>
 <body onload="init()">
@@ -35,6 +38,7 @@
         <img src="img/free_rainbow.png" id="functions0" height="40" width="40" data-todo="randomFace" />
         <!--<img src="img/games-icon.png" id="functions1" height="40" width="40" data-todo="ss" /> dev. dropped, usless -->
 	    <img src="img/CLEANSWEEP.png" id="functions1" height="40" width="40" data-todo="CleanCanvas" />
+        <img src="img/gomma.png" id="functions2" height="40" width="40" data-todo="setExtract"
     </div>
     <!-- menu popup right click-->
         <div id="menu" style="display:none" class="menu">
