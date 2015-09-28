@@ -56,7 +56,12 @@ function spawnDiv(e) {
 function mousemove(e) {
     if (boolDraw && e.clientY > 60 + singleImgH/2  && e.clientX > 60 + singleImgW/2 && e.which != 3)
     {
-		ctx.drawImage(imgDB[extractImg(intSelected, imgDB.length)], e.clientX - singleImgW / 2, e.clientY - singleImgH / 2, singleImgW, singleImgH);
+        var toDraw = null;
+        try{
+            var toDraw = imgDB[extractImg(intSelected, imgDB.length)];
+        }catch(e){}
+
+		ctx.drawImage(toDraw==null || toDraw==undefined ?extractImg(intSelected,imgDB.length) : toDraw, e.clientX - singleImgW / 2, e.clientY - singleImgH / 2, singleImgW, singleImgH);
 	}
 }
 function defaultImg(i){ return i; }
