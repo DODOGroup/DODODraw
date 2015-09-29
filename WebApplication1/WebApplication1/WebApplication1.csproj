@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,6 +76,7 @@
     <Content Include="img\free_rainbow.png" />
     <Content Include="img\games-icon.png" />
     <Content Include="img\gomma.png" />
+    <Content Include="img\loot.png" />
     <Content Include="index.html" />
     <Content Include="img\malo.png" />
     <Content Include="img\mmm.png" />
