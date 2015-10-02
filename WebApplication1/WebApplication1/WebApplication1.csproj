@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\agab.png" />
+    <Content Include="img\arrow.png" />
     <Content Include="img\assioli.png" />
     <Content Include="img\CLEANSWEEP.png" />
     <Content Include="img\dodo.png" />
@@ -76,6 +77,7 @@
     <Content Include="img\free_rainbow.png" />
     <Content Include="img\games-icon.png" />
     <Content Include="img\gomma.png" />
+    <Content Include="img\gomma1.png" />
     <Content Include="img\loot.png" />
     <Content Include="index.html" />
     <Content Include="img\malo.png" />
