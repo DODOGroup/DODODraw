@@ -18,7 +18,17 @@
             inUseFunction = defaultImg;
         }
         function setExtract() {
-            extractImg = function () { return new Image(40, 40);}
+            extractImg = function () { return document.getElementById("functionalToFunction2"); }
+        }
+        function downloadCanvas() {
+            var URL = canvas.toDataURL().replace("image/png", "application/octet-stream");
+            var link = document.createElement("a");
+            link.style.display = "none"
+            document.body.appendChild(link);
+            link.href = URL;
+            link.target = "_blank";
+            link.click();
+            //window.location.href  = (URL);
         }
 	</script>
 </head>
@@ -41,7 +51,9 @@
         <img src="img/free_rainbow.png" id="functions0" height="40" width="40" data-todo="randomFace" />
         <!--<img src="img/games-icon.png" id="functions1" height="40" width="40" data-todo="ss" /> dev. dropped, usless -->
 	    <img src="img/CLEANSWEEP.png" id="functions1" height="40" width="40" data-todo="CleanCanvas" />
-        <img src="img/gomma.png" id="functions2" height="40" width="40" data-todo="setExtract"
+        <img src="img/gomma.png" id="functions2" height="40" width="40" data-todo="setExtract" />
+        <img src="img/gomma1.png" id="functionalToFunction2" height="40" width="40" />
+        <img src="img/arrow.png" id="functions3" height="40" width="40" data-todo="downloadCanvas" />
     </div>
     <!-- menu popup right click-->
         <div id="menu" style="display:none" class="menu">
