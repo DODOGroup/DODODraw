@@ -41,6 +41,7 @@ function attatchEvents() {
     canvas.addEventListener("contextmenu", spawnDiv);
     canvas.addEventListener("touchstart", function (e) { e.preventDefault(); e.clientX = e.targetTouches[0].clientX; e.clientY = e.targetTouches[0].clientY; click(e); });
     canvas.addEventListener("touchmove", function (w) { w.preventDefault(); w.clientX = w.targetTouches[0].clientX; w.clientY = w.targetTouches[0].clientY; boolDraw = true; mousemove(w); boolDraw = false; });
+    document.getElementById("uploadFile").addEventListener("change", applicateUploadToCanvas);
 }
 function spawnDiv(e) {
     var k = document.getElementById("menu");

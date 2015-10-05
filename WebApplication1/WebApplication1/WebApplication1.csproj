@@ -66,31 +66,31 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\agab.png" />
-    <Content Include="img\arrow.png" />
-    <Content Include="img\assioli.png" />
-    <Content Include="img\CLEANSWEEP.png" />
-    <Content Include="img\dodo.png" />
-    <Content Include="img\dora-verticale-wpcf_180x255.jpg" />
+    <Content Include="img\faces\agab.png" />
+    <Content Include="img\functions\arrow.png" />
+    <Content Include="img\faces\assioli.png" />
+    <Content Include="img\functions\CLEANSWEEP.png" />
+    <Content Include="img\faces\dodo.png" />
+    <Content Include="img\functions\dora-verticale-wpcf_180x255.jpg" />
     <Content Include="img\download.png" />
-    <Content Include="img\ennio.png" />
-    <Content Include="img\free_rainbow.png" />
-    <Content Include="img\games-icon.png" />
-    <Content Include="img\gomma.png" />
-    <Content Include="img\gomma1.png" />
-    <Content Include="img\loot.png" />
+    <Content Include="img\faces\ennio.png" />
+    <Content Include="img\functions\free_rainbow.png" />
+    <Content Include="img\functions\games-icon.png" />
+    <Content Include="img\functions\gomma.png" />
+    <Content Include="img\functions\gomma1.png" />
+    <Content Include="img\faces\loot.png" />
+    <Content Include="img\functions\upload.png" />
     <Content Include="index.html" />
-    <Content Include="img\malo.png" />
-    <Content Include="img\mmm.png" />
+    <Content Include="img\faces\malo.png" />
     <Content Include="script.js" />
     <Content Include="style.css" />
-    <Content Include="img\teresa.png" />
-    <Content Include="img\vetto.png" />
+    <Content Include="img\faces\vetto.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
