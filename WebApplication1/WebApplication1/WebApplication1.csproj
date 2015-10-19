@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\faces\agab.png" />
+    <Content Include="img\faces\peecco.png" />
     <Content Include="img\functions\arrow.png" />
     <Content Include="img\faces\assioli.png" />
     <Content Include="img\functions\CLEANSWEEP.png" />
